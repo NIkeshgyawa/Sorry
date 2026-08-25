@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Aabha Baby Girl ❤️</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="heart heart1">❤️</div>
+    <div class="heart heart2">💕</div>
+    <div class="heart heart3">💗</div>
+    <div class="heart heart4">💖</div>
+    <div class="heart heart5">❤️</div>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <div class="card">
+
+            <div class="big-heart">❤️</div>
+
+            <h1>I'm Sorry, Aabha Baby Girl 🥺</h1>
+
+            <p class="intro">
+                I have something I really want to tell you...
+            </p>
+
+            <div class="message">
+
+                <p>
+                    Aabha Baby Girl,
+                </p>
+
+                <p>
+                    I'm really sorry for being so quiet today. 🥺
+                    I wasn't feeling very good and I ended up not
+                    talking with you much in college.
+                </p>
+
+                <p>
+                    But please don't think that it was because of you.
+                    <strong>You did absolutely nothing wrong.</strong>
+                </p>
+
+                <p>
+                    I know you felt sad because I wasn't talking much,
+                    and honestly, I'm sorry that my mood ended up
+                    making you feel that way too.
+                </p>
+
+                <p>
+                    I should have told you what was going on instead
+                    of becoming quiet.
+                </p>
+
+                <p>
+                    You mean a lot to me, and the last thing I want
+                    is for you to feel unwanted or ignored. ❤️
+                </p>
+
+            </div>
+
+            <h2>I'm Really Sorry ❤️</h2>
+
+            <p class="small-text">
+                Please don't be sad anymore, okay? 🥺
+            </p>
+
+            <button onclick="forgiveMe()">
+                Click Me, Baby Girl 💗
+            </button>
+
+            <div id="secret">
+                🥺❤️ Thank you for understanding me.
+                <br><br>
+                Now give me a little smile, Aabha Baby Girl. 💕
+            </div>
+
+            <p class="signature">
+                Made with ❤️ just for Aabha Baby Girl
+            </p>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        function forgiveMe() {
+
+            document.getElementById("secret").style.display = "block";
+
+            // Create lots of hearts
+            for (let i = 0; i < 20; i++) {
+
+                const heart = document.createElement("div");
+
+                heart.innerHTML = "❤️";
+
+                heart.classList.add("pop-heart");
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration =
+                    (2 + Math.random() * 3) + "s";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

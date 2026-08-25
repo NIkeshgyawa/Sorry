@@ -1,0 +1,429 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fff0f6,
+            #ffd5e3
+        );
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 60px 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 55px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 20px 60px rgba(200, 60, 110, 0.20);
+
+    animation: cardAppear 1s ease;
+}
+
+
+/* =========================
+   BIG HEART
+========================= */
+
+.big-heart {
+    font-size: 65px;
+
+    margin-bottom: 20px;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    font-size: 42px;
+
+    color: #e6386b;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    color: #777;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    color: #444;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* Individual paragraphs */
+
+.message p {
+    margin-bottom: 28px;
+}
+
+
+/* Highlighted text */
+
+.message strong {
+    color: #e6386b;
+}
+
+
+/* =========================
+   SORRY HEADING
+========================= */
+
+h2 {
+    color: #e6386b;
+
+    font-size: 30px;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SMALL TEXT
+========================= */
+
+.small-text {
+    color: #777;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+
+    padding: 16px 32px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f81,
+            #e52f68
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(229, 47, 104, 0.3);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 15px 30px rgba(229, 47, 104, 0.4);
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+#secret {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: #fff0f5;
+
+    color: #e6386b;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    animation: secretAppear 0.8s ease;
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+    margin-top: 35px;
+
+    color: #999;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 30px;
+
+    opacity: 0.5;
+
+    animation: floatingHeart 8s linear infinite;
+
+    pointer-events: none;
+}
+
+
+.heart1 {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+
+.heart2 {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+
+.heart3 {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+
+.heart4 {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+
+.heart5 {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+
+/* =========================
+   HEARTS AFTER BUTTON
+========================= */
+
+.pop-heart {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation: floatingHeart 4s linear forwards;
+
+    z-index: 100;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes floatingHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes secretAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .card {
+        padding: 40px 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .big-heart {
+        font-size: 50px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
